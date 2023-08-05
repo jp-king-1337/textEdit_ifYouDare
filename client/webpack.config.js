@@ -45,7 +45,21 @@ module.exports = () => {
 
         module: {
             rules: [
-
+                // https://webdevetc.com/programming-tricks/javascript/webpack/guide-to-webpack-css-style-loader/
+                {
+                    test: /\.css$/, // I know regex at least
+                    use: ["style-loader", "css-loader"],
+                },
+                {
+                    test: /\.js$/,
+                    exclude: /node_modules/,
+                    use: {
+                        loader: "babel-loader",
+                        options: {
+                            presets: ["@babel/preset-env"],
+                        }
+                    }
+                }
             ],
         },
     };
