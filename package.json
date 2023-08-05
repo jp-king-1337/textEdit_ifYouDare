@@ -5,9 +5,9 @@
     "main": "server.js",
     "scripts": {
         "start:dev": "concurrently \"npm run server\" \"npm run client\"",
-        "start": "",
+        "start": "node server.js",
         "server": "if-env NODE_ENV=production && npm run start || nodemon server.js",
-        "build": "",
+        "build": "webpack --config server/webpack.config.js",
         "install": "",
         "client": ""
     },
