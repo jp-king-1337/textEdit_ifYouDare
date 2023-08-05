@@ -20,7 +20,7 @@ module.exports = () => {
         },
         plugins: [
             new HtmlWebpackPlugin({
-                template: "./src/index.html",
+                template: path.resolve(__dirname, "/src/index.html"),
                 chunks: ["main"],
             }),
             new WebpackPwaManifest({
@@ -64,3 +64,5 @@ module.exports = () => {
         },
     };
 };
+
+console.log("HtmlWebpackPlugin Config:", new HtmlWebpackPlugin().options);
