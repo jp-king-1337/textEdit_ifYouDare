@@ -22,7 +22,14 @@ module.exports = () => {
                 template: "./src/index.html",
                 chunks: ["main"],
             }),
-            
+            new WebpackPwaManifest({
+                name: "textEdit_ifYouDare",
+                short_name: "textEdit",
+                description: "This is a text editor.",
+                background_color: "#fff",
+                theme_color: "#fff",
+                icons
+            })
 
         ],
 
