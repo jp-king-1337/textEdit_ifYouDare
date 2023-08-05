@@ -33,10 +33,10 @@ registerRoute(
     new CacheFirst()
 );
 
-registerRoute{
-    ({ request }) =>
-        request.destination === "style" || request.destination === "script",
-        new CacheFirst()
-};
+// registerRoute{
+//     ({ request }) =>
+//         request.destination === "style" || request.destination === "script",
+//         new CacheFirst()
+// };
 
 registerRoute();
