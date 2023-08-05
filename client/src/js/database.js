@@ -18,7 +18,7 @@ export const putDb = async (content) => {
     const tx = db.transaction("jate", "readwrite");
     const store = tx.objectStore("jate");
 
-    // await store.clear(); // Not 100% on this line
+    await store.clear(); // Not 100% on this line
     await store.add({ id: 1, content });
     await tx.done;
 };
