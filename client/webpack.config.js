@@ -32,7 +32,7 @@ module.exports = () => {
                 icons: [
                     {
                         src: path.resolve("src/images/logo.png"),
-                        sizes: [72, 96, 120, 128, 144, 152, 180, 192, 256, 384, 512], // https://stackoverflow.com/questions/48839338/which-icon-sizes-are-required-for-progressive-web-apps-pwa-as-of-q1-2018
+                        sizes: ["48x48, 72x72, 96x96, 144x144, 168x168, 192x192, 256x256, 512x512"], // https://www.dozro.com/cyber/icon-sizes-for-progressive-web-apps-and-native-apps
                         destination: path.join("assets", "icons"),
                     }
                 ]
