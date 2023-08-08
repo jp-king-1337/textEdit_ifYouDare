@@ -62,7 +62,11 @@ module.exports = () => {
                 }
             ],
         },
+
+        devServer: {
+            port: 8080
+        }
     };
 };
 
-console.log("HtmlWebpackPlugin Config:", new HtmlWebpackPlugin().options);
+// console.log("HtmlWebpackPlugin Config:", new HtmlWebpackPlugin().options);
