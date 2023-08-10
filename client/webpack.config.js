@@ -20,7 +20,7 @@ module.exports = () => {
         },
         plugins: [
             new HtmlWebpackPlugin({
-                template: path.resolve(__dirname, "/src/index.html"),
+                template: path.resolve(__dirname, "/index.html"),
                 chunks: ["main"],
             }),
             new WebpackPwaManifest({
@@ -32,7 +32,7 @@ module.exports = () => {
                 icons: [
                     {
                         src: path.resolve("src/images/logo.png"),
-                        sizes: [72, 96, 120, 128, 144, 152, 180, 192, 256, 384, 512], // https://stackoverflow.com/questions/48839338/which-icon-sizes-are-required-for-progressive-web-apps-pwa-as-of-q1-2018
+                        sizes: ["72x72", "96x96", "120x120", "128x128", "144x144", "152x152", "180x180", "192x192", "256x256", "384x384", "512x512"], // https://stackoverflow.com/questions/48839338/which-icon-sizes-are-required-for-progressive-web-apps-pwa-as-of-q1-2018
                         destination: path.join("assets", "icons"),
                     }
                 ]
@@ -62,7 +62,11 @@ module.exports = () => {
                 }
             ],
         },
+
+        devServer: {
+            port: 8080
+        }
     };
 };
 
-console.log("HtmlWebpackPlugin Config:", new HtmlWebpackPlugin().options);
+// console.log("HtmlWebpackPlugin Config:", new HtmlWebpackPlugin().options);
