@@ -6,6 +6,8 @@ This is a refactor of code for a text editor. Starter code was provided to me as
 
 [Deployed Link](https://text-edit-if-you-dare-288bba82860c.herokuapp.com/)
 
+![Screenshot of the deployed website](images/textEdit_ifYouDare_screenshot.png)
+
 
 ## Table of Contents
 - [Installation](#installation)
